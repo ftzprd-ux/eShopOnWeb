@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'dotnet build eShopOnweb.sln'
+        sh 'dotnet build eShopOnWeb.sln'
       }
     }
 
@@ -21,7 +21,7 @@ pipeline {
           }
         }
 
-        stage('Trst Fonctionnel') {
+        stage('Test Fonctionnel') {
           steps {
             sh 'dotnet test tests/FunctionalTests'
           }
